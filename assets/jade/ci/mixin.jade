@@ -1,0 +1,166 @@
+mixin social_bar(imagen,texto,tema,icon)
+	.barra
+		ol.list-inline.list-unstyled
+			li
+				img(src='assets/image/social_sprite3.png')
+			li
+				img(src='assets/image/bullet.gif')
+			li
+				img(src=imagen)
+			li
+				small= texto
+			li
+				img(src='assets/image/bullet.gif')
+			li
+				small= tema
+			li
+				img(src='assets/image/bullet.gif')
+			li
+				i.text-danger(class!=attributes.class)
+
+mixin cinta_tittle1(texto)
+	.tittle.text-center
+		h4.font-cinta_red
+			span=texto
+mixin cinta_tittle2(texto)
+	.tittle.text-center
+		h4.font-cinta_blue
+			span=texto
+mixin grid_main(imagen,texto)
+	.about_grid
+		img(src=imagen)
+		.texto
+			h3=texto
+mixin columnista(imagen,nombre,titulo)
+	.thumbnai.text-center.col-sm-2
+		img(src=imagen)
+		p=nombre
+		strong 
+			h4=titulo
+mixin noticia(titulo,texto,descripcion)
+	.mercado.col-sm-6.text-center
+		p.text-danger=titulo
+		.imagen
+			strong
+				p=texto
+		p=descripcion
+
+mixin all-last-news
+	mixin last_news('Emma Watson protagonizará La Bella y la Bestia','assets/image/img_news.jpg','La actriz Emma Watson fue confirmada por Disney como la protagonista de La Bella y la Bestia en la versión de carne y hueso.')
+	mixin last_news('Roque benavides respalda proyecto Tia Maria y espera que Conga se socialice','assets/image/post-img-sample.jpg','Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventtura, Roque Benavides, el proyecto Tía María, que promueve Southern Perú, ya debe...')
+	mixin last_news('Youtube: hombre finge ahogarse y su perro lo rescata','assets/image/fotogaleria_col03_01.jpg','La actriz Emma Watson fue confirmada por Disney como la protagonista de La Bella y la Bestia en la versión de carne y hueso.')
+	mixin last_news('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atlético Madrid','assets/image/img_grid_especiales.jpg','Después de la pésima actitud de Cristiano Ronaldo, al eagedir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité de Competición ha llegado a la ...')
+
+mixin last_news(titulo,imagen,texto)
+	.news
+		small Hace 1 hora 12 mins
+		h4=titulo
+		.col-md-4
+			img(src=imagen)
+		.col-md-8
+			p=texto
+			+social_bar('assets/image/ico_comment.png','10','ESPECTÁCULOS')(class="fa fa-youtube-play")
+				
+mixin side_bar1(imagen, texto, formato)
+	.row.revista-aweita
+		.col-md-5
+			img(src=imagen)
+		.col-md-7
+			h5=texto
+
+mixin side_bar2(imagen,nombre,texto)
+	.row
+		.col-md-4
+			img(src=imagen)
+		.col-md-8
+			span=nombre
+			h5=texto
+mixin side_bar3(imagen,texto,link)
+	.row
+		.col-md-5
+			img(src=imagen)
+		.col-md-7
+			h5=texto
+			u.text-danger=link
+mixin side_bar4(imagen,texto,formato)
+	.about_grid
+		img(src=imagen)
+		.font-side
+			h4=texto
+				span=formato
+//- MIXIN PARA ENCABEZADOS
+mixin titulares(titulo, subtitulo)
+	strong
+		h1 #{titulo}
+	p.p-azul #{subtitulo}
+		i.i-blog.fa.fa-angle-double-down
+//- -------------------------MIXIN PARA CONTACTO
+mixin datos(datos_generales)
+	input.input-plomo(placeholder="#{datos_generales}") 
+	br
+//- mixin para inputs
+ 
+mixin opciones(...items)
+	form.col-sm-6.radio.mg-c
+		each item in items
+			input.mg-b(type='radio')
+			p= item
+mixin letras(...items)
+	ul.col-sm-6.text-right.pd-c
+		each item in items
+			li.list-inline.mg-b= item		
+//- mixin para lista de inputs tipo radio
+
+//- --------------------------MIXIN PARA BLOGS
+
+mixin blogeros(frase, letra , foto)
+	.blog.col-md-4.text-center
+		.text
+			small Lunes, 14 de Julio de 2015
+			strong
+				h3 #{frase}
+		.foto.text-left
+			img.pull-left(src='#{foto}')
+			strong
+				p BLOG
+			p #{letra}
+
+mixin allBlogeros
+	mixin blogeros('El gol de la muerte', 'Libros', './assets/image/blog_avatar_01.jpg')
+	mixin blogeros('Dios a muerto tengo las manos cubiertas de sangre', 'Ya los pasado ..pasado','./assets/image/blog_avatar_02.jpg')
+	mixin blogeros('¿Cual es tu queso favorito?', 'Decimas de cosas','./assets/image/blog_avatar_03.jpg')
+
+//- --------------------------MIXIN PARA COLUMNISTAS
+			
+mixin allColumnistas
+	mixin blogeros('El gol de la muerte', 'Libros', './assets/image/img_author_columnista.jpg')
+	mixin blogeros('Dios a muerto tengo las manos cubiertas de sangre', 'Ya los pasado ..pasado','./assets/image/aside-personaje-thumb-01.jpg')
+	mixin blogeros('¿Cual es tu queso favorito?', 'Decimas de cosas','./assets/image/img-columnistas.jpg')
+	mixin blogeros('El gol de la muerte', 'Libros', './assets/image/thumb-post-image.jpg')
+	mixin blogeros('Dios a muerto tengo las manos cubiertas de sangre', 'Ya los pasado ..pasado','./assets/image/blog_avatar_01.jpg')
+	mixin blogeros('¿Cual es tu queso favorito?', 'Decimas de cosas','./assets/image/blog_avatar_02.jpg')
+
+mixin menu-columnistas(...items)
+	div.menu-rojo
+		each item in items
+			button.btn-rojo.btn-danger= item
+
+mixin personas_columna(foto, letra)
+	.col-md-3
+		.foto.text-left.mg-t
+			img.pull-left(src='#{foto}')
+			strong
+				p BLOG
+			p #{letra}
+
+mixin allPersonas_columna
+	mixin personas_columna('./assets/image/aside-perfil-img-01.jpg', 'Rosario Calle')
+	mixin personas_columna('./assets/image/aside-personaje-thumb-01.jpg', 'Rosario Calle')
+	mixin personas_columna('./assets/image/blog_avatar_01.jpg', 'Rosario Calle')				
+	mixin personas_columna('./assets/image/blog_avatar_02.jpg', 'Rosario Calle')
+	mixin personas_columna('./assets/image/fotogaleria_col01_01.jpg', 'Rosario Calle')
+	mixin personas_columna('./assets/image/img-columnistas.jpg', 'Rosario Calle')
+	mixin personas_columna('./assets/image/img_grid_principal.jpg', 'Rosario Calle')				
+	mixin personas_columna('./assets/image/img_grid_principal2.jpg', 'Rosario Calle')
+
+

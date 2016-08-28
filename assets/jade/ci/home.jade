@@ -1,0 +1,180 @@
+include mixin.jade
+.container-fluid
+	.titulo.text-center
+		strong
+			h1.main-titulo GUERRA EN LA MUNICIPALIDAD DE LIMA METROPOLITANA
+	block hero_section
+	.row
+		.col-md-12
+			center
+				+social_bar('','Hace 12 minutos','POLÍTICA')
+	.row.hero
+		.col-md-6
+				+grid_main('assets/image/img_grid_principal.jpg','JNE impulsará campaña en favor de la aprobación de la Reforma Electoral del Perù,')
+		.col-md-6
+				+grid_main('assets/image/img_grid_secundario.jpg','Martín Belaunde Lossio: Empresas vinculadas al empresario contrataron por $S/.3 000 millones','|FOTOS')
+		.col-md-6
+				+grid_main('assets/image/img_grid_secundario.jpg','Sub 20: Perú vs. Paraguay: bicolor empató 1-1 y pasó al hexagonal final del Sudamericano','|VIDEO')
+	block content
+	.row.columnistas
+		a.referencia(href='columnistas.html')
+			+cinta_tittle1('COLUMNISTAS')
+		.columlist
+			mixin columnista('assets/image/img-columnistas.jpg','Mario Vargas LLosa','Megarrenuncia apulpinante')
+			mixin columnista('assets/image/img_blogueros.jpg','Augusto Álvarez Rodrich','Respuesta a una derrota estridente')
+			mixin columnista('assets/image/img-columnistas.jpg','Mario Vargas LLosa','Megarrenuncia apulpinante')
+			mixin columnista('assets/image/img_blogueros.jpg','Augusto Álvarez Rodrich','Respuelista a una derrota estridente')
+			mixin columnista('assets/image/img-columnistas.jpg','Mario Vargas LLosa','Megarrenuncia apulpinante')
+			mixin columnista('assets/image/img_blogueros.jpg','Augusto Álvarez Rodrich','Respuesta a una derrota estridente')
+	.row.columlist
+		ol.list-inline.list-unstyled.text-center.dots
+			li
+				a(href='#')
+					i.fa.fa-circle
+			li
+				a(href='#')
+					i.fa.fa-circle
+			li
+				a(href='#')
+					i.fa.fa-circle
+	.row
+		.col-md-8
+				mixin noticia("Mercado de Pases 2015","Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos.", "Todo sobre mercado de pases 2015.")
+				mixin noticia("Mercado de Pases 2015","Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos.", "Todo sobre mercado de pases 2015.")
+				mixin noticia("Mercado de Pases 2015","Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos.", "Todo sobre mercado de pases 2015.")
+				mixin noticia("Mercado de Pases 2015","Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos.", "Todo sobre mercado de pases 2015.")
+		.col-md-4.text-center.banners
+			img(src='assets/image/banner-aside-home.jpg')
+	block noticias
+	.row
+		.col-md-8
+			mixin titulares('', 'ÚLTIMAS NOTICIAS')
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+			mixin all-last-news
+
+
+		.col-md-4
+			.interactive_box
+				.suscrib
+					img.sus_msg(src='assets/image/img_sucribe.png')
+					h3  Susríbete a nuestro boletín
+					input.form-control(type='text')
+					button.btn.btn-danger(type='submit') SUSCRIBIRSE
+			.row
+				.aweita
+					img(src='assets/image/logo_aweita.jpg')
+					+side_bar1('assets/image/img_aweita.jpg','Juan Román Riquelme, el adiós al"Último 10" de Argentina')
+					+side_bar1('assets/image/img_aweita.jpg','Lewia Carroll: un día como hoy nació el autor de "Alicia en el')
+					+side_bar1('assets/image/img_aweita.jpg','Juan Román Riquelme, el adiós al"Último 10" de Argentina')
+					+side_bar1('assets/image/img_aweita.jpg','Gameplay de "Dead Kings", el descargable premium de "Assassin´s')
+						center
+							.color-font
+								p.text-center Más en 
+									span Aweita.pe
+			.tittle_blue
+				+cinta_tittle2('FOTOS DESTACADAS')
+				img.img-responsive(src='assets/image/img_fotodes_prominent.jpg')
+				h4 Líneas de Nazca: admiten prisión preventiva de 6 meses para activista de Greenpeace. |FOTOS
+				+side_bar1('assets/image/img_fotodes.jpg','Uchuraccayy: eL pueblo que recibe con flores a quienes llegan a pie','|FOTOS')
+				+side_bar1('assets/image/img_fotodes.jpg','Alianza lima vs Fénix: íntimos gaanron 1-0 en "Noche Blanquiazul"','|VIDEO Y FOTOS')
+				+side_bar1('assets/image/img_fotodes.jpg','Tomas Berdych derrotó 3-0 a Rafael Nadal y avanzó en el Australian Open','|FOTOS')
+			.tittle_blue
+				+cinta_tittle2('ESPECIALES')
+				+side_bar4('assets/image/img_especiales_aside.jpg','COP20')
+				+side_bar4('assets/image/img_especiales_aside.jpg','Concentración de Medios')
+				+side_bar4('assets/image/img_especiales_aside.jpg','Especies peruanas en peligro de extinción')
+			.tittle_red
+				+cinta_tittle1('CARLINCATURA DEL DÍA')
+				center
+					h4 Carlincaturas 30-01-2015
+					img.img-responsive(src='assets/image/img_carlincatura_sd.jpg')
+					p.text-danger Todas las Carlincaturas
+			.tittle_blue
+				a(href='blog.html')
+					+cinta_tittle2('NUESTROS BLOGUEROS')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','Charlie Hebdo, historia que no debe repetirse')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','El único pulpin es Humala')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','Dios ha muerto...tengo las manos')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','El único pulpin es Humala')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','Charlie Hebdo, historia que no debe repetirse')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','El único pulpin es Humala')
+				+side_bar2('assets/image/img_blogueros.jpg','Augusto álvarez Rodrich','Dios ha muerto...tengo las manos')
+				+side_bar2('assets/image/img_blogueros.jpg','','Augusto álvarez Rodrich','El único pulpin es Humala')
+			.tittle_red
+				.row.hidden-xs
+					+cinta_tittle1('EDICIÓN IMPRESA')
+					h3 La República - Lima
+					img.img-responsive(src='assets/image/img_impreso_sd_prominent.jpg')
+					+side_bar3('assets/image/img_impreso_sd.jpg','Extorsionan a menores en colegios','La República - Norte')
+					+side_bar3('assets/image/img_impreso_sd.jpg','Lluvias en Arequipa inundan casas y causan caos en calles','La República - Sur')
+					+side_bar3('assets/image/img_impreso_sd.jpg','El Ojo de Oblitas','Domingo')
+			.tittle_blue
+				+cinta_tittle2('INFOGRAFÍAS')
+				+side_bar4('assets/image/img_especiales_aside.jpg','Histórico cierre de frontera')
+				+side_bar4('assets/image/img_especiales_aside.jpg','Evolución de la pobreza e indigencia en América Latina')
+			.interactive_box
+				.in-box
+					img.ref_img(src='assets/image/img_pregunta.png')
+					h4 La pregunta de hoy
+					p  ¿Cree usted que la premier Ana Jara debe renunciar?
+					.radio
+						label.radio-inline
+							input(type='radio') 
+							br 
+							input(type='radio')
+							br
+					button.btn.btn-danger(type='submit') VOTAR
+					br
+					p.text-danger Ver resultados
+				.in-box
+					h4 La pregunta de ayer
+					p  ¿Cree usted que se militarizó la conmemoración del fallo de La Haya en Lima?
+					.progress
+						.progress-bar(role='progressbar', aria-valuenow='55', aria-valuemin='0', aria-valuemax='100', style='width: 55%;')	55%
+					.progress
+						.progress-bar(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100', style='width: 25%;')	25%
+					p.text-danger Ver preguntas pasadas
+			.libero
+				center
+					img(src='assets/image/logo_libero.jpg')
+				+side_bar1('assets/image/img_fotodes.jpg','Fiorentina empató 1-1 en su visita al Genoa con rgan actuación de Juan Vargas','[VIDEO]')
+				+side_bar1('assets/image/img_fotodes.jpg','Jefferson Farfán: Schacle 04 tampoco sabe cuándo volverá a las canchas','[FOTOS]')
+				+side_bar1('assets/image/img_fotodes.jpg','Barcelona vs. Villarereal: cuáles ganaron 3-2 con goles de Lionel Messi y Neymar por la Liga BBVA','[VIDEO]')
+				+side_bar1('assets/image/img_fotodes.jpg','Perú cayó 3-1 ante Colombia por el hexagonal final del Sudamericano Sub 20','[VIDEO/FOTOS]')
+				p Más en 
+					span.text-danger Libero.pe
+			.el_popular
+				center
+					img(src='assets/image/logo_popular.jpg')
+				+side_bar1('assets/image/noticia-angie.jpg','Joshua Ivanof está loco por olor de Melissa Loza')
+				+side_bar1('assets/image/noticia-angie.jpg','Corinthians: Paolo Guerrero dedica su gol a Alondra García')
+				+side_bar1('assets/image/noticia-angie.jpg','Angie Arizaga es amenazada de muerte','(VIDEO)')
+				+side_bar1('assets/image/noticia-angie.jpg','Philip Seymour Hoffman: Un año sin el premiado actor','(VIDEO)')
+				p Más en 
+					span.text-danger elPopular.pe
+			.wapa
+				center
+					img(src='assets/image/logo_wapa.jpg')
+				+side_bar1('assets/image/nota-ninos.jpg','¿Cómo renovar el guardaropa de los más pequeños en este verano?')
+				+side_bar1('assets/image/nota-shakira.jpg','Shakira y Pique ya son padres por segunda vez')
+				+side_bar1('assets/image/nota-ted.jpg','Ted 2: Mira el tráiler de la cinta')
+				+side_bar1('assets/image/nota-shoes.jpg','Cómo usar zapatos altos sin dolor')
+				p Más en 
+					span.text-danger elPopular.pe
+			.interactive_box
+				.in-box
+					img.ref_img(src='assets/image/img_reporteroc.png')
+					h4 Reporte ciudadano
+					img(src='assets/image/img_sd_reporteroc.jpg')
+					h5 Estacionamiento indebido
+					p ¿Está permitido qque dejen sua uto en reiteradas ocasiones toda la noche en la puerta de tu casa? Placa DG6232, eso que antes lo dejaba entre la vereda y mi puerta.
+					button.btn.btn-danger(type='submit') ENVIAR FOTOS
+					p.text-danger Más fotos
+				

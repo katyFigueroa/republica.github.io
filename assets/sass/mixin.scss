@@ -1,0 +1,93 @@
+@import "_variables.scss";
+/*CLASES ESPECIALES*/
+.container-fluid{
+	margin: 0 150px;
+}
+
+.mg-c{
+	margin: 0;
+}
+.mg-t{
+	margin:3% 3% 3% 0;
+}
+.pd-c{
+	padding: 0;
+}
+.i-blog{
+	color: $rojo;
+	margin: 1%;
+}
+.p-azul{
+	margin: 0;
+    font-family: "oswald",arial;
+    font-size: 15px;
+    color: $azul;
+    text-transform: uppercase;
+}
+.mg-b{
+	margin-bottom: 3.1%;
+}
+/*MIXIN SASS PARA SECCION CONTACTO*/
+
+.input-general{
+	width: 650px;
+	background: $plomo;
+	@media screen and(max-width:750px){
+	width: 100%;	
+	}
+	
+}
+.input-plomo{
+	@extend .input-general;
+	margin: 1%;
+	
+}
+.input-mensaje{
+	@extend .input-general;
+	height: 100px;
+	border-style: inset;
+	border-width: 2px;
+	border-color: initial;
+}
+.bloque-texto{
+	padding: 0 22.5%;
+}
+
+/*MIXIN SASS PARA SECCION BLOG*/
+.blog{
+	padding: 1%;
+	outline:2px solid $plomo;
+	outline-offset: -5px;
+}
+.text{
+	height: 120px;
+}
+
+.foto{
+	width: 100%;
+	padding:5% 2%;
+	background: $plomo;
+	vertical-align: top;
+	img{
+		border:2px solid $blanco;
+		margin: 0 3%;
+		height: 55px;
+		width: 55px;
+	}
+	p:nth-child(3){
+		color: $azul;
+	}
+}	
+
+/*MIXIN SASS PARA SECCION CULUMNISTAS*/
+.menu-rojo{
+	background: $rojo;
+	text-align: center;
+	width: 100%;
+}
+.btn-rojo{
+	margin:1%;
+	padding: 0 2%;
+	background: $rojo;
+	border: none;
+}

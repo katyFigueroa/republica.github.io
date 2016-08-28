@@ -1,0 +1,42 @@
+html
+	head
+		include ./ci/links.jade
+		include ./ci/mixin.jade
+	body
+		include ./ci/header.jade
+		.container-fluid
+			.row
+				.contacto
+					strong.text-center
+						h1 Contáctese con nosotros
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptate mollitia eum, sunt rem. Laboriosam libero molestias architecto at, vitae culpa doloribus commodi earum excepturi quidem repellendus rem eius, eaque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eaque placeat, autem nostrum incidunt sit quam nulla similique dicta expedita quaerat perferendis! Quis excepturi culpa pariatur sit, libero, fugiat qui.
+					br
+			.row
+				.bloque-input.text-center
+					+datos('Nombre y apellidos completos')
+					+datos('Correo electronico')
+					+datos('Telefono')
+				.bloque-texto
+					small (Opcional)
+					strong
+						h5 Elija un destinatario
+					+opciones('Sugerencia para el sitio webs', 'Direccion periodistica', 'Direccion comercial', 'Cartas al director' ,'Promociones y productos del diario' ,'Archivo periodistico')
+					+letras("(Ej:funcionamieno y mejoras del sitio)", "(Ej:Sugerencia para la nota de prensa)", "(Ej:Publicidad en los diarios y sitios webs)", "(Ej:Denuncias comentarios e impresiones)", "(Ej:Promociones, tables,etc", "(Ej:Ediciones  imprensas/fotos)")
+					//- ul.text-right
+					//- 	each val in ["(Ej:funcionamieno y mejoras del sitio)", "Ej:Sugerencia para la nota de prensa", "Ej:Publicidad en los diarios y sitios webs", "Ej:Denuncias comentarios e impresiones", "Ej:Promociones, tables,etc", "Ej:Ediciones  imprensas/fotos"]
+					//- 		li.list-inline.mg-b=val
+				.bloque-mensaje.text-center
+					textarea.input-mensaje.mg-b(type="text" placeholder="Mensaje")
+					br
+					img.mg-b(src='./assets/image/contacto_submit_btn.jpg')
+		include ./ci/footer.jade
+
+
+
+
+
+
+
+
+
+

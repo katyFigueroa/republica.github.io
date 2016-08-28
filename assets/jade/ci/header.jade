@@ -1,0 +1,76 @@
+.header-top.hidden-xs
+	.container-fluid
+		img(src="assets/image/banner_top.jpg")
+		.row
+			.col-md-7.top.hidden-xs
+				ul.list-unsyte.list-inline 
+					each item__menu in["LIBERO.PE", "ELPOPULAR.PE", "FUNDACIÓN GUSTAVO MOHME LLONA"]
+						li: a.link-menu(href="#")= item__menu
+			.col-md-5.top
+				button.boton.hidden-xs SUSCRIBETE AL BOLETÍN
+				i.i.fa.fa-facebook.facebook
+				i.i.fa.fa-twitter.twitter
+				i.i.fa.fa-google-plus.google
+				i.i.fa.fa-envelope.msg
+				i.i.fa.fa-rss.w
+				button.buscar BUSCAR
+					i.fa.fa-search
+.header
+	.container-fluid
+		.row.republica.hidden-xs
+			.col-md-4.logo
+				img(src="assets/image/logo-la-republica.jpg")
+			.col-md-4.text-center
+				.titulo
+					p 
+						strong DOMINGO
+				.lider
+					p 
+						strong HABLA LA LIDEREZA DEL NACIONALISMO
+			.col-md-4
+				.caja-autor.text-center
+					img(src="assets/image/img_author.jpg")
+					.autor
+						p 
+							strong La corrupsión, los origenes
+						p por: Gustavo Mohme Llona
+		.row.menu
+			.col-md-12
+			nav.navbar.navbar-custom
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button",class="navbar-toggle",data-toggle="collapse",data-target="#navbars")
+						i.fa.fa-bars
+					img.navbar-brand.visible-xs(src="assets/image/logo-la-republica.jpg")
+				.collapse.navbar-collapse#navbars
+					ul.nav.navbar-nav
+						li.hidden
+							a(href="#")
+						li
+							a(href="#") POLÍTICA
+						li
+							a(href="#") ECONOMÍA
+						li
+							a(href="#") SOCIEDAD
+						li
+							a(href="#") ELECC. REGIONALES
+						li
+							a(href="#") DEPORTES
+						li
+							a(href="#") CHAMPIONS L.
+						li
+							a(href="#") ESPECTÁCULOS
+						li
+							a(href="#") REGIONALES
+						li
+							a(href="#") MÁS SECCIONES
+.tem
+	.container-fluid
+		.row.temas.hidden-xs
+			.col-md-12
+				ul.list-unsyte.list-inline.list-temas
+					each item__menu in["TEMAS DEL DÍA", "<", "Globos de oro", "Youtube", "PNP", "Charlie Hedbod","FC Barceñlona", "Alianza Lima", "Balón de Oro","Alianza Lima", "Balón", ">"]
+						li: a.link-menu(href="#")= item__menu
+.lateral-left.hidden-xs
+	img(src='assets/image/lateral.jpg')
+.lateral-right.hidden-xs
+	img(src='assets/image/lateral.jpg')

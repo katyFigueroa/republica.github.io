@@ -1,0 +1,98 @@
+/*CLASES ESPECIALES*/
+.container-fluid {
+  margin: 0 150px;
+}
+
+.mg-c {
+  margin: 0;
+}
+
+.mg-t {
+  margin: 3% 3% 3% 0;
+}
+
+.pd-c {
+  padding: 0;
+}
+
+.i-blog {
+  color: #B20000;
+  margin: 1%;
+}
+
+.p-azul {
+  margin: 0;
+  font-family: "oswald",arial;
+  font-size: 15px;
+  color: #768596;
+  text-transform: uppercase;
+}
+
+.mg-b {
+  margin-bottom: 3.1%;
+}
+
+/*MIXIN SASS PARA SECCION CONTACTO*/
+.input-general, .input-plomo, .input-mensaje {
+  width: 650px;
+  background: #F2F2F2;
+}
+
+.input-plomo {
+  margin: 1%;
+}
+
+.input-mensaje {
+  height: 100px;
+  border-style: inset;
+  border-width: 2px;
+  border-color: initial;
+}
+
+.bloque-texto {
+  padding: 0 22.5%;
+}
+
+/*MIXIN SASS PARA SECCION BLOG*/
+.blog {
+  padding: 1%;
+  outline: 2px solid #F2F2F2;
+  outline-offset: -5px;
+}
+
+.text {
+  height: 120px;
+}
+
+.foto {
+  width: 100%;
+  padding: 5% 2%;
+  background: #F2F2F2;
+  vertical-align: top;
+  background: linear-gradient(to bottom, white 0%, white 47%, #121212 100%);
+}
+
+.foto img {
+  border: 2px solid #fff;
+  margin: 0 3%;
+  height: 55px;
+  width: 55px;
+}
+
+.foto p:nth-child(3) {
+  color: #768596;
+}
+
+/*MIXIN SASS PARA SECCION CULUMNISTAS*/
+.menu-rojo {
+  background: #B20000;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-rojo {
+  margin: 1%;
+  padding: 0 2%;
+  background: #B20000;
+  border: none;
+}

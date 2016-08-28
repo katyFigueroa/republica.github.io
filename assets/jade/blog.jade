@@ -1,0 +1,17 @@
+html
+	head
+		include ./ci/links.jade
+		include ./ci/mixin.jade
+	body
+		include ./ci/header.jade
+		.container-fluid
+			mixin titulares('Blog', 'LO ULTIMO EN BLOG')
+			.row
+				mixin allBlogeros
+				mixin allBlogeros
+				mixin allBlogeros
+				mixin allBlogeros
+				mixin allBlogeros
+				mixin allBlogeros
+				mixin allBlogeros
+		include ./ci/footer.jade
